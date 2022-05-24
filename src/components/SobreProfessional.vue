@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex align-items-center justify-content-center bg-warning">
-    <div class="d-flex bg-white shadow-lg p-4 justify-content-between">
+    <div class="d-flex bg-white shadow-lg p-5 justify-content-between">
       <form>
-        <h1 class="text-primary-0">Sobre o profissional</h1>
-        <h5 class="mt-4">Dados do profissional</h5>
         <div class="container">
+          <h1 class="text-primary-0">Sobre o profissional</h1>
+          <h5 class="mt-4">Dados do profissional</h5>
           <div class="row">
             <div class="col">
               <div class="mt-4">
@@ -124,4 +124,5 @@ h1 {
 .progress-bar {
   background-color: #483698;
 }
+
 </style>

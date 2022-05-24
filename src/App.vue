@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    <AboutProfessional />
+    <SobreProfessional />
+    <sobre-atendimento />
   </div>
 </template>
 
 <script>
-import AboutProfessional from "./components/AboutProfessional.vue";
-
+import SobreProfessional from "./components/SobreProfessional"
+import SobreAtendimento from "./components/SobreAtendimento"
 export default {
   name: "App",
   components: {
-    AboutProfessional,
+    SobreProfessional,
+    SobreAtendimento
   },
 };
 </script>
