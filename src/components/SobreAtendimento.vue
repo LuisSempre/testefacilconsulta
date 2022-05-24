@@ -75,6 +75,45 @@
                     <label class="form-check-label" for="defaultCheck3">
                       Cartão de crédito
                     </label>
+                    <p>Parcelamento em</p>
+                    <div class="form-check">
+                      <div>
+                        <input
+                          class="form-check-input position-static"
+                          type="radio"
+                          name="blankRadio"
+                          id="blankRadio1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="blankRadio1">
+                          1x, sem juros
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          class="form-check-input position-static"
+                          type="radio"
+                          name="blankRadio"
+                          id="blankRadio1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="blankRadio1">
+                          2x, sem juros
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          class="form-check-input position-static"
+                          type="radio"
+                          name="blankRadio"
+                          id="blankRadio1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="blankRadio1">
+                          3x, sem juros
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
