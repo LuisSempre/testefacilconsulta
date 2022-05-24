@@ -1,12 +1,23 @@
 <template>
-  <div class="bg-warning container-fill">
-    <div class="container-md rounded mx-auto my-auto bg-white">
-      <div class="row">
-        <div class="col-6">
-          <div class="card-body">
-            <h1 class="mt-4 text-primary-0">Sobre o profissional</h1>
-            <h5 class="mt-4">Dados do profissional</h5>
-            <form>
+  <div class="d-flex align-items-center justify-content-center bg-warning">
+    <div
+      class="
+        d-flex
+        mx-auto
+        flex-row
+        align-items-center
+        justify-content-center
+        bg-white
+        p-4
+        shadow-lg
+      "
+    >
+      <div class="m-4 d-flex flex-column aligin-items-start justify-content-end">
+        <form>
+          <h1 class="text-primary-0">Sobre o profissional</h1>
+          <h5 class="mt-4">Dados do profissional</h5>
+          <div class="row">
+            <div class="col-6">
               <div class="mt-4">
                 <label for="exampleInputEmail1">Nome completo*</label>
                 <input
@@ -50,25 +61,36 @@
                     placeholder="Selecione"
                   />
                 </div>
-                <button
-                  type="submit"
-                  class="
-                    btn-lg btn-block
-                    rounded-pill
-                    mt-4
-                    btn btn-primary
-                    text-uppercase
-                  "
-                >
-                  próximo
-                </button>
               </div>
-            </form>
+              <div class="progress mt-4">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <button
+                type="submit"
+                class="
+                  w-100
+                  btn-lg btn-block
+                  rounded
+                  mt-4
+                  btn btn-primary
+                  text-uppercase
+                "
+              >
+                próximo
+              </button>
+            </div>
+            <div class="col-6 overflow-hidden">
+              <img src="/images/pageone.png" alt="Imagem de um profissional" />
+            </div>
           </div>
-        </div>
-        <div class="col-6 mt-4">
-          <img src="/images/pageone.png" alt="Imagem de um profissional" />
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -78,10 +100,21 @@
 import "bootstrap/dist/css/bootstrap.css";
 export default {};
 </script>
-
-<style>
-.text-primary-0 {
+<style scoped>
+input {
+  border: 1px solid #483698;
+}
+h1 {
   color: #483698;
+}
+.bg-warning {
+  height: 100vh;
+}
+.bg-white {
+  border-radius: 30px;
+}
+.flex-column {
+  height: 100%;
 }
 .btn-primary {
   color: #fff;
@@ -92,5 +125,12 @@ export default {};
   color: #fff;
   background-color: #483698;
   border-color: #483698;
+}
+.progress {
+  height: 30px;
+}
+
+.progress-bar {
+  background-color: #483698;
 }
 </style>
