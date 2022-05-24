@@ -12,7 +12,9 @@
         shadow-lg
       "
     >
-      <div class="m-4 d-flex flex-column aligin-items-start justify-content-end">
+      <div
+        class="m-4 d-flex flex-column aligin-items-start justify-content-end"
+      >
         <form>
           <h1 class="text-primary-0">Sobre o profissional</h1>
           <h5 class="mt-4">Dados do profissional</h5>
@@ -47,19 +49,15 @@
               <div class="row mt-4">
                 <div class="col">
                   <label for="exampleInputPassword1">Estado*</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Selecione"
-                  />
+                  <select class="form-control" id="states">
+                    <option value="">Selecione</option>
+                  </select>
                 </div>
                 <div class="col">
                   <label for="exampleInputPassword1">Cidade*</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Selecione"
-                  />
+                  <select class="form-control" id="cities" disabled>
+                    <option value="">Selecione</option>
+                  </select>
                 </div>
               </div>
               <div class="progress mt-4">
@@ -98,7 +96,10 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
-export default {};
+export default {
+  setup() {
+  }
+};
 </script>
 <style scoped>
 input {
