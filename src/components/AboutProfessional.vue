@@ -1,25 +1,12 @@
 <template>
   <div class="d-flex align-items-center justify-content-center bg-warning">
-    <div
-      class="
-        d-flex
-        mx-auto
-        flex-row
-        align-items-center
-        justify-content-center
-        bg-white
-        p-4
-        shadow-lg
-      "
-    >
-      <div
-        class="m-4 d-flex flex-column aligin-items-start justify-content-end"
-      >
-        <form>
-          <h1 class="text-primary-0">Sobre o profissional</h1>
-          <h5 class="mt-4">Dados do profissional</h5>
+    <div class="d-flex bg-white shadow-lg p-4 justify-content-between">
+      <form>
+        <h1 class="text-primary-0">Sobre o profissional</h1>
+        <h5 class="mt-4">Dados do profissional</h5>
+        <div class="container">
           <div class="row">
-            <div class="col-6">
+            <div class="col">
               <div class="mt-4">
                 <label for="exampleInputEmail1">Nome completo*</label>
                 <input
@@ -28,7 +15,7 @@
                   placeholder="Digite o nome completo"
                 />
               </div>
-              <div class="col-8">
+              <div class="row">
                 <div class="mt-4">
                   <label for="exampleInputPassword1">CPF*</label>
                   <input
@@ -84,12 +71,13 @@
                 próximo
               </button>
             </div>
-            <div class="col-6 overflow-hidden">
+
+            <div class="col">
               <img src="/images/pageone.png" alt="Imagem de um profissional" />
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </template>
@@ -97,11 +85,13 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 export default {
-  setup() {
-  }
+  setup() {},
 };
 </script>
 <style scoped>
+select {
+  border: 1px solid #483698;
+}
 input {
   border: 1px solid #483698;
 }
