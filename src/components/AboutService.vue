@@ -144,7 +144,6 @@
                 próximo
               </button>
             </div>
-
             <div class="col">
               <img src="/images/pagetwo.png" alt="Imagem de um profissional" />
             </div>
@@ -158,7 +157,7 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 export default {
-	props: ["about"],
+  props: ["about"],
 };
 </script>
 <style scoped>
@@ -200,6 +199,6 @@ h1 {
 
 span {
   background-color: #483698;
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: 0.25rem;
 }
 </style>
