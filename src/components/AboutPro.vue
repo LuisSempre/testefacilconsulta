@@ -15,23 +15,21 @@
                   placeholder="Digite o nome completo"
                 />
               </div>
-              <div class="row">
-                <div class="mt-4">
-                  <label for="exampleInputPassword1">CPF*</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Digite um CPF"
-                  />
-                </div>
-                <div class="mt-4">
-                  <label for="exampleInputPassword1">Número de celular*</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="(00) 0 0000-0000"
-                  />
-                </div>
+              <div class="mt-4">
+                <label for="exampleInputPassword1">CPF*</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Digite um CPF"
+                />
+              </div>
+              <div class="mt-4">
+                <label for="exampleInputPassword1">Número de celular*</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="(00) 0 0000-0000"
+                />
               </div>
               <div class="row mt-4">
                 <div class="col">
@@ -57,19 +55,21 @@
                   aria-valuemax="100"
                 ></div>
               </div>
-              <button
-                type="submit"
-                class="
-                  w-100
-                  btn-lg btn-block
-                  rounded
-                  mt-4
-                  btn btn-primary
-                  text-uppercase
-                "
-              >
-                próximo
-              </button>
+              <router-link to="/about/:about">
+                <button
+                  type="submit"
+                  class="
+                    w-100
+                    btn-lg btn-block
+                    rounded
+                    mt-4
+                    btn btn-primary
+                    text-uppercase
+                  "
+                >
+                  próximo
+                </button>
+              </router-link>
             </div>
 
             <div class="col">
@@ -84,9 +84,7 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
-export default {
-  setup() {},
-};
+export default {};
 </script>
 <style scoped>
 select {
@@ -124,5 +122,4 @@ h1 {
 .progress-bar {
   background-color: #483698;
 }
-
 </style>

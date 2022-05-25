@@ -1,23 +1,12 @@
 <template>
-  <div id="app">
-    <SobreProfessional />
-    <sobre-atendimento />
+  <div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import SobreProfessional from "./components/SobreProfessional"
-import SobreAtendimento from "./components/SobreAtendimento"
+import "bootstrap/dist/css/bootstrap.css";
 export default {
-  name: "App",
-  components: {
-    SobreProfessional,
-    SobreAtendimento
-  },
+	name: "App",
 };
 </script>
-
-<style>
-
-</style>
-

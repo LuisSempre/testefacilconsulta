@@ -13,7 +13,7 @@
                   <option value="">Selecione a especialidade</option>
                 </select>
               </div>
-              <div class="row py-4">
+              <div class="py-4">
                 <div>
                   <label for="exampleInputEmail1"
                     >Informe o preço da consulta*</label
@@ -47,8 +47,9 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
+                      name="blankRadio"
+                      id="blankRadio1"
                       value="option1"
-                      id="defaultCheck1"
                     />
                     <label class="form-check-label" for="defaultCheck1">
                       Em dinheiro
@@ -58,8 +59,9 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      value="option2"
-                      id="defaultCheck2"
+                      name="blankRadio"
+                      id="blankRadio1"
+                      value="option1"
                     />
                     <label class="form-check-label" for="defaultCheck2">
                       Pix
@@ -69,8 +71,9 @@
                     <input
                       class="form-check-input"
                       type="checkbox"
-                      value="option3"
-                      id="defaultCheck3"
+                      name="blankRadio"
+                      id="blankRadio1"
+                      value="option1"
                     />
                     <label class="form-check-label" for="defaultCheck3">
                       Cartão de crédito
@@ -155,7 +158,7 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 export default {
-  setup() {},
+	props: ["about"],
 };
 </script>
 <style scoped>
@@ -197,6 +200,6 @@ h1 {
 
 span {
   background-color: #483698;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 </style>
