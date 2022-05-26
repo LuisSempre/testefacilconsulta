@@ -6,7 +6,7 @@
           <h1 class="text-primary-0">Sobre o Atendimento</h1>
           <h5 class="mt-4">Detalhes do atendimento</h5>
           <div class="row">
-            <div class="col">
+            <div class="col-5">
               <div class="mt-4">
                 <label for="exampleInputEmail1">Especialidade principal*</label>
                 <select class="form-control" id="specials">
@@ -43,7 +43,7 @@
                   <p for="exampleInputPassword1">
                     Formas de pagamento da consulta*
                   </p>
-                  <div class="mb-3 bg-light p-2 shadow-md rounded">
+                  <div class="mb-3 bg-gray p-2 shadow-lg rounded">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -55,7 +55,7 @@
                       Em dinheiro
                     </label>
                   </div>
-                  <div class="mb-3 bg-light p-2 shadow-md rounded">
+                  <div class="mb-3 bg-gray p-2 shadow-md rounded">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -67,7 +67,7 @@
                       Pix
                     </label>
                   </div>
-                  <div class="mb-3 bg-light p-2 shadow-md rounded">
+                  <div class="mb-3 bg-gray p-2 shadow-md rounded">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -144,7 +144,7 @@
                 próximo
               </button>
             </div>
-            <div class="col">
+            <div class="col-4">
               <img src="/images/pagetwo.png" alt="Imagem de um profissional" />
             </div>
           </div>
@@ -171,6 +171,7 @@ h1 {
   color: #483698;
 }
 .bg-warning {
+  background-color: var(--cta-2);
   height: 100vh;
 }
 .bg-white {
@@ -199,6 +200,10 @@ h1 {
 
 span {
   background-color: #483698;
-  border-radius: 0.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.bg-gray {
+  background-color: var(--secondary-1);
 }
 </style>

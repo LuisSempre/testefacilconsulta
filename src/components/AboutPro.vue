@@ -6,7 +6,7 @@
           <h1 class="text-primary-0">Sobre o profissional</h1>
           <h5 class="mt-4">Dados do profissional</h5>
           <div class="row">
-            <div class="col">
+            <div class="col-5">
               <div class="mt-4">
                 <label for="exampleInputEmail1">Nome completo*</label>
                 <input
@@ -34,14 +34,34 @@
               <div class="row mt-4">
                 <div class="col">
                   <label for="exampleInputPassword1">Estado*</label>
-                  <select class="form-control" id="states">
-                    <option value="">Selecione</option>
+                  <select
+                    class="form-control"
+                    :text="selectEstado.nome || 'Selecione'"
+                  >
+                    <option>Selecione</option>
+                    <option
+                      v-for="estado in estados"
+                      :key="estado.id"
+                      @click="selectEstado(estado)"
+                    >
+                      {{ estado.nome }}
+                    </option>
                   </select>
                 </div>
                 <div class="col">
                   <label for="exampleInputPassword1">Cidade*</label>
-                  <select class="form-control" id="cities" disabled>
-                    <option value="">Selecione</option>
+                  <select
+                    class="form-control"
+                    :text="selectCidade.nome || 'Selecione'"
+                  >
+                    <option>Selecione</option>
+                    <option
+                      v-for="cidade in cidades"
+                      :key="cidade.id"
+                      @click="selectCidade(cidade)"
+                    >
+                      {{ cidade.nome }}
+                    </option>
                   </select>
                 </div>
               </div>
@@ -72,8 +92,12 @@
               </router-link>
             </div>
 
-            <div class="col">
-              <img src="/images/pageone.png" alt="Imagem de um profissional" />
+            <div class="col-4">
+              <img
+                class="overflow"
+                src="/images/pageone.png"
+                alt="Imagem de um profissional"
+              />
             </div>
           </div>
         </div>
@@ -84,7 +108,41 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
-export default {};
+import api from "@/services/api";
+export default {
+  data() {
+    return {
+      estados: [],
+      selectEstado: {},
+      selectCidade: {},
+      cidades: [],
+    };
+  },
+  created() {
+    this.getEstados();
+    this.getCidades();
+  },
+  methods: {
+    getEstados() {
+      api.get("/estados").then((response) => {
+        this.estados = response.data;
+      });
+    },
+
+    getCidades() {
+      api.get("/cidades").then((response) => {
+        this.cidades = response.data;
+      });
+    },
+    selectEstados(estado) {
+      this.selectEstado = estado;
+      this.getCidades();
+    },
+    selectCidades(cidade) {
+      this.selectCidade = cidade;
+    },
+  },
+};
 </script>
 <style scoped>
 select {
