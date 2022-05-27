@@ -6,6 +6,8 @@ import AboutService from "./components/AboutService.vue";
 
 Vue.use(VueRouter);
 
+
+
 const router = new VueRouter({
 	routes: [
 		{

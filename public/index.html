@@ -6,41 +6,42 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-    </head>
-    <body>
-      <noscript>
-        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
-            work
-            properly without JavaScript enabled. Please enable it to
-            continue.</strong>
-        </noscript>
-        <div id="app"></div>
-        <!-- built files will be auto injected -->
-      </body>
-      <style>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <style>
     :root {
       --primary-0: #483698;
-      --primary-1: #7362BF;
+      --primary-1: #7362bf;
       --primary-2: #291873;
-      
-      --cta-0: #FFE766;
-      --cta-1: #FBDE40;
-      --cta-2: #D4B615;
 
-      --secondary-0:#FFFFFF;
-      --secondary-1:#F9F9F9;
-      --secondary-2:#DFDFDF;
-      --secondary-3:#B98989;
-      --secondary-4:#8A8A8A;
-      --secondary-5: #5A5A5A;
-      --secondary-6:#3A3A3A;
-      --secondary-7:#282828;
-      --secondary-8:##000000;
+      --cta-0: #ffe766;
+      --cta-1: #fbde40;
+      --cta-2: #d4b615;
 
-      --information: #17A2B8;
-      --success: #28A745;
-      --warning: #FFC107;
-      --danger: #DC3545;
+      --secondary-0: #ffffff;
+      --secondary-1: #f9f9f9;
+      --secondary-2: #dfdfdf;
+      --secondary-3: #b98989;
+      --secondary-4: #8a8a8a;
+      --secondary-5: #5a5a5a;
+      --secondary-6: #3a3a3a;
+      --secondary-7: #282828;
+      --secondary-8: ##000000;
+
+      --information: #17a2b8;
+      --success: #28a745;
+      --warning: #ffc107;
+      --danger: #dc3545;
     }
     @font-face {
       font-family: "Comfortaa-Regular";
@@ -70,20 +71,36 @@
       font-family: "OpenSans-Regular";
       src: url("/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
     }
-    
-    h1, button {
+
+    h1,
+    button {
       font-family: "Comfortaa-Bold", cursive;
       font-weight: bold;
     }
-    h2, h3, h5, h6, p, span {
+    h2,
+    h3,
+    h5,
+    h6,
+    p,
+    span {
       font-family: "OpenSans-Regular", cursive;
       font-weight: bold;
     }
-    @media only screen and (max-width: 1024px){
-        img {display: none;}
+    @media only screen and (max-width: 1024px) {
+      img {
+        display: none;
+      }
     }
-    @media only screen and (max-width: 1024px){
-        .col {flex: none;}
+    @media only screen and (max-width: 1024px) {
+      .col {
+        flex: none;
+      }
+    }
+    .bg-cta-0 {
+      background-color: var(--cta-0);
+    }
+    .bg-white {
+      border-radius: 30px;
     }
   </style>
-    </html>
+</html>

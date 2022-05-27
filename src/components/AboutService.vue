@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex align-items-center justify-content-center bg-warning">
-    <div class="d-flex bg-white shadow-lg p-5 justify-content-between">
+  <div class="d-flex align-items-center justify-content-center bg-cta-0">
+    <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
       <form>
         <div class="container">
           <h1 class="text-primary-0">Sobre o Atendimento</h1>
@@ -9,9 +9,19 @@
             <div class="col-5">
               <div class="mt-4">
                 <label for="exampleInputEmail1">Especialidade principal*</label>
-                <select class="form-control" id="specials">
-                  <option value="">Selecione a especialidade</option>
-                </select>
+                <select
+                    class="form-control"
+                    :text="selecProfessionais.nome || 'Selecione'"
+                  >
+                    <option>Selecione</option>
+                    <option
+                      v-for="profissional in profissionais"
+                      :key="profissional.id"
+                      @click="selecProfessionais(profissional)"
+                    >
+                      {{ profissional.nome }}
+                    </option>
+                  </select>
               </div>
               <div class="py-4">
                 <div>
@@ -156,8 +166,27 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.css";
+import api from "@/services/api";
 export default {
-  props: ["about"],
+  data() {
+    return {
+      profissionais: [],
+      selecProfessionais: {},
+    };
+  },
+  created() {
+    this.geProfessionaiss();
+  },
+  methods: {
+    geProfessionaiss() {
+      api.get("/profissionais").then((response) => {
+        this.profissionais = response.data;
+      });
+    },
+    selecProfessionaiss(profissional) {
+      this.selecProfessionais = profissional;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -170,12 +199,8 @@ input {
 h1 {
   color: #483698;
 }
-.bg-warning {
-  background-color: var(--cta-2);
+.bg-cta-0 {
   height: 100vh;
-}
-.bg-white {
-  border-radius: 30px;
 }
 .flex-column {
   height: 100%;

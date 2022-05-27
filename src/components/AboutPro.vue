@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex align-items-center justify-content-center bg-warning">
-    <div class="d-flex bg-white shadow-lg p-5 justify-content-between">
+  <div class="d-flex align-items-center justify-content-center bg-cta-0">
+    <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
       <form>
         <div class="container">
           <h1 class="text-primary-0">Sobre o profissional</h1>
@@ -154,7 +154,7 @@ input {
 h1 {
   color: #483698;
 }
-.bg-warning {
+.bg-cta-0 {
   height: 100vh;
 }
 .bg-white {
