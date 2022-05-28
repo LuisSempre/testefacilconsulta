@@ -10,18 +10,18 @@
               <div class="mt-4">
                 <label for="exampleInputEmail1">Especialidade principal*</label>
                 <select
-                    class="form-control"
-                    :text="selecProfessionais.nome || 'Selecione'"
+                  class="form-control"
+                  :text="selecProfessionais.nome || 'Selecione'"
+                >
+                  <option>Selecione</option>
+                  <option
+                    v-for="profissional in profissionais"
+                    :key="profissional.id"
+                    @click="selecProfessionais(profissional)"
                   >
-                    <option>Selecione</option>
-                    <option
-                      v-for="profissional in profissionais"
-                      :key="profissional.id"
-                      @click="selecProfessionais(profissional)"
-                    >
-                      {{ profissional.nome }}
-                    </option>
-                  </select>
+                    {{ profissional.nome }}
+                  </option>
+                </select>
               </div>
               <div class="py-4">
                 <div>
@@ -53,84 +53,51 @@
                   <p for="exampleInputPassword1">
                     Formas de pagamento da consulta*
                   </p>
-                  <div class="mb-3 bg-gray p-2 shadow-lg rounded">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="blankRadio"
-                      id="blankRadio1"
-                      value="option1"
-                    />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Em dinheiro
-                    </label>
+                  <div class="bg-gray rounded shadow">
+                    <div class="mb-3 px-5 py-2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="blankRadio"
+                        id="blankRadio1"
+                        value="option1"
+                      />
+                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                        Em dinheiro
+                      </label>
+                    </div>
                   </div>
-                  <div class="mb-3 bg-gray p-2 shadow-md rounded">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="blankRadio"
-                      id="blankRadio1"
-                      value="option1"
-                    />
-                    <label class="form-check-label" for="defaultCheck2">
-                      Pix
-                    </label>
+                  <div class="bg-gray rounded shadow">
+                    <div class="mb-3 px-5 py-2 ">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="blankRadio"
+                        id="blankRadio1"
+                        value="option1"
+                      />
+                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                        Pix
+                      </label>
+                    </div>
                   </div>
-                  <div class="mb-3 bg-gray p-2 shadow-md rounded">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="blankRadio"
-                      id="blankRadio1"
-                      value="option1"
-                    />
-                    <label class="form-check-label" for="defaultCheck3">
-                      Cartão de crédito
-                    </label>
-                    <p>Parcelamento em</p>
-                    <div class="form-check">
-                      <div>
-                        <input
-                          class="form-check-input position-static"
-                          type="radio"
-                          name="blankRadio"
-                          id="blankRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="blankRadio1">
-                          1x, sem juros
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          class="form-check-input position-static"
-                          type="radio"
-                          name="blankRadio"
-                          id="blankRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="blankRadio1">
-                          2x, sem juros
-                        </label>
-                      </div>
-                      <div>
-                        <input
-                          class="form-check-input position-static"
-                          type="radio"
-                          name="blankRadio"
-                          id="blankRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="blankRadio1">
-                          3x, sem juros
-                        </label>
-                      </div>
+                  <div class="bg-gray rounded shadow">
+                    <div class="mb-3 px-5 py-2">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="blankRadio"
+                        id="blankRadio1"
+                        value="option1"
+                      />
+                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                        Cartão de crédito
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="progress mt-4">
+              <div class="progress">
                 <div
                   class="progress-bar"
                   role="progressbar"
@@ -230,5 +197,9 @@ span {
 
 .bg-gray {
   background-color: var(--secondary-1);
+}
+.px-5 {
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 </style>
