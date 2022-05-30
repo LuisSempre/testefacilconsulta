@@ -32,10 +32,10 @@
                 />
               </div>
               <div class="row mt-4">
-                <div class="col">
+                <div class="col-6">
                   <label for="exampleInputPassword1">Estado*</label>
                   <select
-                    class="form-control"
+                    class="form-control px-1"
                     :text="selectEstado.nome || 'Selecione'"
                   >
                     <option>Selecione</option>
@@ -48,10 +48,10 @@
                     </option>
                   </select>
                 </div>
-                <div class="col">
+                <div class="col-6">
                   <label for="exampleInputPassword1">Cidade*</label>
                   <select
-                    class="form-control"
+                    class="form-control px-1"
                     :text="selectCidade.nome || 'Selecione'"
                   >
                     <option>Selecione</option>
@@ -76,19 +76,7 @@
                 ></div>
               </div>
               <router-link to="/about/:about">
-                <button
-                  type="submit"
-                  class="
-                    w-100
-                    btn-lg btn-block
-                    rounded
-                    mt-4
-                    btn btn-primary
-                    text-uppercase
-                  "
-                >
-                  próximo
-                </button>
+                <SubmitButton />
               </router-link>
             </div>
 
@@ -109,7 +97,9 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 import api from "@/services/api";
+import SubmitButton from "@/components/SubmitButton.vue";
 export default {
+  components: { SubmitButton },
   data() {
     return {
       estados: [],
@@ -172,12 +162,5 @@ h1 {
   color: #fff;
   background-color: #483698;
   border-color: #483698;
-}
-.progress {
-  height: 30px;
-}
-
-.progress-bar {
-  background-color: #483698;
 }
 </style>

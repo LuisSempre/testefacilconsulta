@@ -10,7 +10,7 @@
               <div class="mt-4">
                 <label for="exampleInputEmail1">Especialidade principal*</label>
                 <select
-                  class="form-control"
+                  class="form-control px-1"
                   :text="selecProfessionais.nome || 'Selecione'"
                 >
                   <option>Selecione</option>
@@ -54,7 +54,7 @@
                     Formas de pagamento da consulta*
                   </p>
                   <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-2">
+                    <div class="mb-3 px-5 py-3">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -62,13 +62,16 @@
                         id="blankRadio1"
                         value="option1"
                       />
-                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                      <label
+                        class="form-check-label ml-4"
+                        for="defaultCheck1"
+                      >
                         Em dinheiro
                       </label>
                     </div>
                   </div>
                   <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-2 ">
+                    <div class="mb-3 px-5 py-3">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -76,13 +79,16 @@
                         id="blankRadio1"
                         value="option1"
                       />
-                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                      <label
+                        class="form-check-label fw-semibold ml-4"
+                        for="defaultCheck1"
+                      >
                         Pix
                       </label>
                     </div>
                   </div>
                   <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-2">
+                    <div class="mb-3 px-5 py-3">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -90,7 +96,10 @@
                         id="blankRadio1"
                         value="option1"
                       />
-                      <label class="form-check-label font-weight-bold ml-4" for="defaultCheck1">
+                      <label
+                        class="form-check-label fw-semibold ml-4"
+                        for="defaultCheck1"
+                      >
                         Cartão de crédito
                       </label>
                     </div>
@@ -107,19 +116,7 @@
                   aria-valuemax="100"
                 ></div>
               </div>
-              <button
-                type="submit"
-                class="
-                  w-100
-                  btn-lg btn-block
-                  rounded
-                  mt-4
-                  btn btn-primary
-                  text-uppercase
-                "
-              >
-                próximo
-              </button>
+             <SubmitButton />
             </div>
             <div class="col-4">
               <img src="/images/pagetwo.png" alt="Imagem de um profissional" />
@@ -134,7 +131,9 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 import api from "@/services/api";
+import SubmitButton from "@/components/SubmitButton.vue";
 export default {
+    components: { SubmitButton },
   data() {
     return {
       profissionais: [],
@@ -181,13 +180,6 @@ h1 {
   color: #fff;
   background-color: #483698;
   border-color: #483698;
-}
-.progress {
-  height: 30px;
-}
-
-.progress-bar {
-  background-color: #483698;
 }
 
 span {
