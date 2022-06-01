@@ -20,7 +20,8 @@
     <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
       <form>
         <div class="container">
-          <h1 class="text-primary-0">Sobre o Atendimento</h1>
+          <h1 class="text-primary-0">Revisão de cadastro</h1>
+          <h5 class="mt-4">Detalhes do atendimento</h5>
           <div class="row">
             <div class="col-5">
               <div class="py-2">
@@ -120,7 +121,7 @@
                 </div>
               </div>
               <progress-bar />
-              <router-link to="/about/:about/:preview">
+              <router-link to="/">
                 <submit-button />
               </router-link>
             </div>

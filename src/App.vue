@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex align-items-center justify-content-center bg-cta-0">
-    <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
+  <div>
+    <div class="bg-cta-0 d-flex align-items-center justify-content-center">
       <router-view></router-view>
     </div>
   </div>

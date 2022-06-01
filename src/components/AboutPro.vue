@@ -1,5 +1,5 @@
 <template>
-  <div>
+   <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
     <form>
       <div class="container">
         <h1 class="text-primary-0">Sobre o profissional</h1>
