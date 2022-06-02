@@ -72,6 +72,7 @@
       src: url("/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
     }
 
+    a,
     h1,
     button {
       font-family: "Comfortaa-Bold", cursive;
@@ -86,8 +87,9 @@
       font-family: "OpenSans-Regular", cursive;
       font-weight: bold;
     }
+    a,
     h1 {
-      color: #483698;
+      color: va(--primary-0);
     }
     select {
       padding: 0px;
@@ -148,6 +150,19 @@
       color: #000000;
       padding-top: 2rem;
       padding-bottom: 2rem;
+    }
+    .progress {
+      height: 20px;
+    }
+    .progress-bar {
+      background-color: #483698;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      grid-template-columns: 6fr 1fr;
     }
   </style>
 </html>

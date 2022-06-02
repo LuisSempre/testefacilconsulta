@@ -1,5 +1,5 @@
 <template>
-   <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
+  <div class="d-flex bg-white p-5 justify-content-between shadow-lg">
     <form>
       <div class="container">
         <h1 class="text-primary-0">Sobre o profissional</h1>
@@ -10,23 +10,23 @@
               <label for="exampleInputEmail1">Nome completo*</label>
               <input
                 type="email"
-                class="form-control"
+                class="form-control px-4"
                 placeholder="Digite o nome completo"
               />
             </div>
-            <div class="mt-4">
+            <div class="mt-4 w-75">
               <label for="exampleInputPassword1">CPF*</label>
               <input
                 type="password"
-                class="form-control"
+                class="form-control px-4"
                 placeholder="Digite um CPF"
               />
             </div>
-            <div class="mt-4">
+            <div class="mt-4 w-75">
               <label for="exampleInputPassword1">Número de celular*</label>
               <input
                 type="password"
-                class="form-control"
+                class="form-control px-4"
                 placeholder="(00) 0 0000-0000"
               />
             </div>
@@ -64,7 +64,21 @@
                 </select>
               </div>
             </div>
-            <progress-bar />
+            <div class="grid py-4">
+              <div class="progress mt-4">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 50%"
+                  aria-valuenow="50"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+              <div>
+                <a>1 de 2</a>
+              </div>
+            </div>
             <router-link to="/about/:about">
               <submit-button />
             </router-link>
@@ -86,9 +100,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import api from "@/services/api";
 import SubmitButton from "@/components/SubmitButton.vue";
-import ProgressBar from "@/components/ProgressBar.vue";
 export default {
-  components: { SubmitButton, ProgressBar },
+  components: { SubmitButton },
   data() {
     return {
       estados: [],

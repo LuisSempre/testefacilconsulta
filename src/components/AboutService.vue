@@ -21,15 +21,16 @@
       <form>
         <div class="container">
           <h1 class="text-primary-0">Sobre o Atendimento</h1>
+          <h5 class="mt-4">Detalhes do atendimento</h5>
           <div class="row">
             <div class="col-5">
               <div class="py-2">
                 <label for="exampleInputEmail1">Especialidade principal*</label>
                 <select
-                  class="form-control px-1"
+                  class="form-control px-4"
                   :text="selecProfessionais.nome || 'Selecione'"
                 >
-                  <option>Selecione</option>
+                  <option>Selecione a especialidade</option>
                   <option
                     v-for="profissional in profissionais"
                     :key="profissional.id"
@@ -44,7 +45,7 @@
                   <label for="exampleInputEmail1"
                     >Informe o preço da consulta*</label
                   >
-                  <div class="input-group">
+                  <div class="input-group w-75">
                     <span
                       class="
                         px-2
@@ -69,8 +70,8 @@
                   <p for="exampleInputPassword1">
                     Formas de pagamento da consulta*
                   </p>
-                  <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-3">
+                  <div class="bg-gray rounded shadow px-4">
+                    <div class="mb-3 py-3 px-5">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -79,11 +80,11 @@
                         value="option1"
                       />
                       <label class="form-check-label ml-4" for="defaultCheck1">
-                        Em dinheiro
+                        Pix
                       </label>
                     </div>
                   </div>
-                  <div class="bg-gray rounded shadow">
+                  <div class="bg-gray rounded shadow px-4">
                     <div class="mb-3 px-5 py-3">
                       <input
                         class="form-check-input"
@@ -96,11 +97,11 @@
                         class="form-check-label fw-semibold ml-4"
                         for="defaultCheck1"
                       >
-                        Pix
+                        Em dinheiro
                       </label>
                     </div>
                   </div>
-                  <div class="bg-gray rounded shadow">
+                  <div class="bg-gray rounded shadow px-4">
                     <div class="mb-3 px-5 py-3">
                       <input
                         class="form-check-input"
@@ -119,7 +120,21 @@
                   </div>
                 </div>
               </div>
-              <progress-bar />
+              <div class="grid py-4">
+                <div class="progress mt-4">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                <div>
+                  <a>2 de 2</a>
+                </div>
+              </div>
               <router-link to="/about/:about/:preview">
                 <submit-button />
               </router-link>
@@ -138,9 +153,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import api from "@/services/api";
 import SubmitButton from "@/components/SubmitButton.vue";
-import ProgressBar from "./ProgressBar.vue";
 export default {
-  components: { SubmitButton, ProgressBar },
+  components: { SubmitButton },
   data() {
     return {
       profissionais: [],
