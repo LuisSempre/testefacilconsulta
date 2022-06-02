@@ -64,7 +64,7 @@
                 type="submit"
                 class="w-100 mt-4 border-white border bg-transparent"
               >
-                Editar cadastro
+                <b>Editar cadastro</b>
               </button>
             </div>
             <div class="col-4">
