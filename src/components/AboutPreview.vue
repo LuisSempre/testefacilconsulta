@@ -105,30 +105,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-select {
-  border: 1px solid #483698;
-}
-input {
-  border: 1px solid #483698;
-}
-
-.bg-cta-0 {
-  height: 100vh;
-}
-.flex-column {
-  height: 100%;
-}
-span {
-  background-color: #483698;
-  border-radius: 0.25rem 0 0 0.25rem;
-}
-
-.bg-gray {
-  background-color: var(--secondary-1);
-}
-.px-5 {
-  padding-right: 4rem;
-  padding-left: 4rem;
-}
-</style>

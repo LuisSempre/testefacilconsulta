@@ -71,7 +71,6 @@
       font-family: "OpenSans-Regular";
       src: url("/fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
     }
-
     a,
     h1,
     button {
@@ -89,11 +88,12 @@
     }
     a,
     h1 {
-      color: va(--primary-0);
+      color: var(--primary-0);
     }
     select {
       padding: 0px;
     }
+
     @media only screen and (max-width: 1024px) {
       img {
         display: none;
@@ -115,8 +115,16 @@
     }
     .bg-white {
       border-radius: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
+    @media only screen and (max-width: 1024px) {
+      .bg-white {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
     .btn-primary {
       border-radius: 30px;
       color: #fff;
@@ -163,6 +171,32 @@
       gap: 2rem;
       align-items: center;
       grid-template-columns: 6fr 1fr;
+    }
+    b {
+      font-family: "Comfortaa-Bold", cursive;
+      color: var(--primary-0);
+      width: 25%;
+    }
+    select {
+      border: 1px solid #483698;
+    }
+    input {
+      border: 1px solid #483698;
+    }
+    .flex-column {
+      height: 100%;
+    }
+    span {
+      background-color: #483698;
+      border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    .bg-gray {
+      background-color: var(--secondary-1);
+    }
+    .px-5 {
+      padding-right: 4rem;
+      padding-left: 4rem;
     }
   </style>
 </html>

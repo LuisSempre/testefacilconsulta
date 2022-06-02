@@ -4,10 +4,10 @@ import VueRouter from "vue-router";
 import AboutPro	from "./components/AboutPro.vue";
 import AboutService from "./components/AboutService.vue";
 import AboutPreview from "./components/AboutPreview.vue";
+import Vuelidate from "vuelidate";
 
 Vue.use(VueRouter);
-
-
+Vue.use(Vuelidate);
 
 const router = new VueRouter({
 	routes: [
