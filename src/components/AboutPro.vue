@@ -140,14 +140,4 @@ h1 {
 .flex-column {
   height: 100%;
 }
-.btn-primary {
-  color: #fff;
-  background-color: #483698;
-  border-color: #483698;
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #483698;
-  border-color: #483698;
-}
 </style>

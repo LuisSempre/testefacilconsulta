@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <router-link to="/">
+      <router-link to="/about/:about">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -21,112 +21,57 @@
       <form>
         <div class="container">
           <h1 class="text-primary-0">Revisão de cadastro</h1>
-          <h5 class="mt-4">Detalhes do atendimento</h5>
           <div class="row">
             <div class="col-5">
               <div class="py-2">
-                <label for="exampleInputEmail1">Especialidade principal*</label>
-                <select
-                  class="form-control px-1"
-                  :text="selecProfessionais.nome || 'Selecione'"
-                >
-                  <option>Selecione</option>
-                  <option
-                    v-for="profissional in profissionais"
-                    :key="profissional.id"
-                    @click="selecProfessionais(profissional)"
-                  >
-                    {{ profissional.nome }}
-                  </option>
-                </select>
+                <p>Nome Completo</p>
               </div>
-              <div class="py-0.25">
-                <div>
-                  <label for="exampleInputEmail1"
-                    >Informe o preço da consulta*</label
-                  >
-                  <div class="input-group">
-                    <span
-                      class="
-                        px-2
-                        text-white
-                        input-group-addon
-                        d-flex
-                        align-items-center
-                        justify-content-center
-                      "
-                      >R$</span
-                    >
-                    <input
-                      id="msg"
-                      type="text"
-                      class="form-control"
-                      name="msg"
-                      placeholder="Valor"
-                    />
-                  </div>
-                </div>
-                <div class="mt-4">
-                  <p for="exampleInputPassword1">
-                    Formas de pagamento da consulta*
-                  </p>
-                  <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-3">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="blankRadio"
-                        id="blankRadio1"
-                        value="option1"
-                      />
-                      <label class="form-check-label ml-4" for="defaultCheck1">
-                        Em dinheiro
-                      </label>
-                    </div>
-                  </div>
-                  <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-3">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="blankRadio"
-                        id="blankRadio1"
-                        value="option1"
-                      />
-                      <label
-                        class="form-check-label fw-semibold ml-4"
-                        for="defaultCheck1"
-                      >
-                        Pix
-                      </label>
-                    </div>
-                  </div>
-                  <div class="bg-gray rounded shadow">
-                    <div class="mb-3 px-5 py-3">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        name="blankRadio"
-                        id="blankRadio1"
-                        value="option1"
-                      />
-                      <label
-                        class="form-check-label fw-semibold ml-4"
-                        for="defaultCheck1"
-                      >
-                        Cartão de crédito
-                      </label>
-                    </div>
-                  </div>
+              <div>
+                <div class="py-2">
+                  <p>CPF</p>
                 </div>
               </div>
-              <progress-bar />
-              <router-link to="/">
-                <submit-button />
-              </router-link>
+              <div>
+                <div class="py-2">
+                  <p>Número de celular ou telefone</p>
+                </div>
+              </div>
+              <div>
+                <div class="py-2">
+                  <p>Estado/Cidade</p>
+                </div>
+              </div>
+              <div>
+                <div class="py-2">
+                  <p>Especialidade</p>
+                </div>
+              </div>
+              <div>
+                <div class="py-2">
+                  <p>Preço da consulta</p>
+                </div>
+              </div>
+              <div class="py-2">
+                <p>Formas de pagamento da consulta</p>
+              </div>
+              <button
+                type="submit"
+                class="w-100 btn-block mt-4 btn btn-secondary text-uppercase"
+              >
+                Cadastrar professional
+              </button>
+               <button
+                type="submit"
+                class="w-100 mt-4 border-white border bg-transparent"
+              >
+                Editar cadastro
+              </button>
             </div>
             <div class="col-4">
-              <img src="/images/pagetwo.png" alt="Imagem de um profissional" />
+              <img
+                src="/images/pagetrhee.png"
+                alt="Imagem de um profissional"
+              />
             </div>
           </div>
         </div>
@@ -138,10 +83,7 @@
 <script>
 import "bootstrap/dist/css/bootstrap.css";
 import api from "@/services/api";
-import SubmitButton from "@/components/SubmitButton.vue";
-import ProgressBar from "./ProgressBar.vue";
 export default {
-  components: { SubmitButton, ProgressBar },
   data() {
     return {
       profissionais: [],
@@ -170,9 +112,7 @@ select {
 input {
   border: 1px solid #483698;
 }
-h1 {
-  color: #483698;
-}
+
 .bg-cta-0 {
   height: 100vh;
 }
