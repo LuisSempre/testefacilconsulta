@@ -27,7 +27,16 @@ $ yarn
 $ yarn run serve
 ```
 
-## License
+## Creditos
+
+Este software usa os seguintes pacotes de código aberto:
+
+- [Vuejs](https://vuejs.org/)
+- [Boostrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+- [Axios](https://axios-http.com/)
+- [Vuelidade](https://www.npmjs.com/package/vuelidate)
+
+## Licença
 
 MIT
 
@@ -35,4 +44,3 @@ MIT
 
 > GitHub [LuisSempre](https://github.com/LuisSempre) &nbsp;&middot;&nbsp;
 > Linkdein [LuisLucas](https://www.linkedin.com/in/luis-lucas-a5b30737/)
-
